@@ -329,12 +329,17 @@ class _BorrowListState extends State<BorrowList> {
                             actions: [
                               CupertinoActionSheetAction(
                                 onPressed: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => ReadBook(bookID: book.bookId),));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            ReadBook(bookID: book.bookId),
+                                      ));
                                   // Navigator.pop(context);
                                 },
                                 child: const Text('Read'),
                               ),
-                              ],
+                            ],
                             cancelButton: CupertinoActionSheetAction(
                               onPressed: () {
                                 Navigator.pop(context);
@@ -440,12 +445,13 @@ class _HistoryListState extends State<HistoryList> {
                         actions: [
                           CupertinoActionSheetAction(
                             onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => ReadBook(bookID: book.bookId),
-                                  ),
-                                );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      ReadBook(bookID: book.bookId),
+                                ),
+                              );
                             },
                             child: const Text('Read'),
                           ),
